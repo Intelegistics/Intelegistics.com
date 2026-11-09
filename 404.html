@@ -16,10 +16,11 @@
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
-    /* Photo slots accept .jpg, .jpeg, .png or .webp (any case). If none exists, the placeholder stays. */
-    window.__photoExt = ["jpeg", "png", "webp", "JPG", "JPEG", "PNG", "WEBP"];
+    /* Photo slots load the file named in src (.webp); if it is missing they try .jpg, .jpeg, .png (any case). If none exists, the placeholder stays. */
+    window.__photoExt = ["webp", "jpg", "jpeg", "png", "WEBP", "JPG", "JPEG", "PNG"];
     function __photo(img) {
-      var n = +(img.dataset.n || 0);
+      var n = +(img.dataset.n || 0), cur = (img.getAttribute("src") || "").split(".").pop();
+      while (n < __photoExt.length && __photoExt[n] === cur) n++;
       if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
       else { img.remove(); }
     }
@@ -112,6 +113,7 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/preload.js" defer></script>
 <script src="assets/js/track.js" defer></script>
 </body>
 </html>

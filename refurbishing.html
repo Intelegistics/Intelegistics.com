@@ -16,10 +16,11 @@
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
-    /* Photo slots accept .jpg, .jpeg, .png or .webp (any case). If none exists, the placeholder stays. */
-    window.__photoExt = ["jpeg", "png", "webp", "JPG", "JPEG", "PNG", "WEBP"];
+    /* Photo slots load the file named in src (.webp); if it is missing they try .jpg, .jpeg, .png (any case). If none exists, the placeholder stays. */
+    window.__photoExt = ["webp", "jpg", "jpeg", "png", "WEBP", "JPG", "JPEG", "PNG"];
     function __photo(img) {
-      var n = +(img.dataset.n || 0);
+      var n = +(img.dataset.n || 0), cur = (img.getAttribute("src") || "").split(".").pop();
+      while (n < __photoExt.length && __photoExt[n] === cur) n++;
       if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
       else { img.remove(); }
     }
@@ -81,7 +82,7 @@
   <div class="container">
     <div class="split">
   <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-bench" data-fit="natural">
-  <img src="assets/img/photos/refurb-bench.jpg" data-base="assets/img/photos/refurb-bench" alt="Technicians refurbishing smartphones at a repair bench" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
+  <img src="assets/img/photos/refurb-bench.webp" data-base="assets/img/photos/refurb-bench" alt="Technicians refurbishing smartphones at a repair bench" loading="lazy" decoding="async" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Technicians refurbishing smartphones at a repair bench</span><code>photos/refurb-bench.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">
@@ -110,7 +111,7 @@
   <div class="container">
     <div class="split split--reverse">
   <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-data-security" data-fit="natural">
-  <img src="assets/img/photos/refurb-data-security.jpg" data-base="assets/img/photos/refurb-data-security" alt="Secure data-wipe station with devices connected" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
+  <img src="assets/img/photos/refurb-data-security.webp" data-base="assets/img/photos/refurb-data-security" alt="Secure data-wipe station with devices connected" loading="lazy" decoding="async" onload="__photoFit(this)" onerror="__photo(this)">
   <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Secure data-wipe station with devices connected</span><code>photos/refurb-data-security.jpg or .png</code></figcaption>
 </figure></div>
   <div class="split-body reveal">
@@ -210,6 +211,7 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/preload.js" defer></script>
 <script src="assets/js/track.js" defer></script>
 </body>
 </html>
