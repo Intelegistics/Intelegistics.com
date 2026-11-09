@@ -1,0 +1,25 @@
+Photo slots: drop an image named exactly as below into this folder and it appears automatically.
+Any of these work: .jpg, .jpeg, .png, .webp (upper- or lower-case), e.g. refurb-bench.jpeg or refurb-bench.PNG.
+Recommended: at least 1600px on the long side, landscape unless noted, under ~400 KB each.
+Photos are cropped to fill the slot shape, so keep the subject near the centre.
+
+home-who-we-work-with  |  Home  |  aspect 5/4  |  Team sorting returned devices on a processing line
+home-hands-on  |  Home  |  aspect 5/4  |  Operator inspecting and grading a smartphone at a test bench
+returns-assessment  |  Reverse Logistics & Returns  |  aspect 4/3  |  Operations lead reviewing a returns workflow on the floor
+returns-program-design  |  Reverse Logistics & Returns  |  aspect 4/3  |  Trade-in devices being sorted by condition
+returns-workflow  |  Reverse Logistics & Returns  |  aspect 4/3  |  Technician at an intake and triage station
+returns-partners-launch  |  Reverse Logistics & Returns  |  aspect 4/3  |  Pallets of returned electronics moving through a 3PL facility
+refurb-bench  |  Refurbishment & Lifecycle  |  aspect 4/3  |  Technicians refurbishing smartphones at a repair bench
+refurb-data-security  |  Refurbishment & Lifecycle  |  aspect 4/3  |  Secure data-wipe station with devices connected
+value-channels  |  Value-Add Services  |  aspect 4/3  |  Pallets of graded devices staged for wholesale buyers
+value-partners  |  Value-Add Services  |  aspect 4/3  |  Operations team meeting at a 3PL partner site
+assets-mobile-devices  |  What We Handle  |  aspect 4/3  |  Assorted smartphones and tablets
+assets-computers-it  |  What We Handle  |  aspect 4/3  |  Laptops, servers, and networking equipment
+assets-consumer-electronics  |  What We Handle  |  aspect 4/3  |  Speakers, wearables, and smart-home devices
+assets-greentech-energy  |  What We Handle  |  aspect 4/3  |  Solar panels and battery storage units
+assets-healthtech-medical  |  What We Handle  |  aspect 4/3  |  Diagnostic and healthcare technology equipment
+assets-industrial-commercial  |  What We Handle  |  aspect 4/3  |  Industrial machinery, tools, and automation parts
+assets-retail-excess  |  What We Handle  |  aspect 4/3  |  Pallets of retail returns and overstock
+assets-end-of-life  |  What We Handle  |  aspect 4/3  |  End-of-life equipment sorted for parts and recycling
+about-story  |  About  |  aspect 4/5  |  The Intelegistics team on a device-processing floor
+about-founder  |  About  |  aspect 4/5  |  Portrait of the Intelegistics founder and CEO

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refurbishment & Device Lifecycle | Intelegistics</title>
+  <meta name="description" content="Refurbishment and device-processing program design: intake, testing and grading, data sanitization, repair, and routing every device to its best next life.">
+  <meta name="theme-color" content="#0f141b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Intelegistics, Inc.">
+  <meta property="og:title" content="Refurbishment & Device Lifecycle | Intelegistics">
+  <meta property="og:description" content="Refurbishment and device-processing program design: intake, testing and grading, data sanitization, repair, and routing every device to its best next life.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/exo-2-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Photo slots accept .jpg, .jpeg, .png or .webp (any case). If none exists, the placeholder stays. */
+    window.__photoExt = ["jpeg", "png", "webp", "JPG", "JPEG", "PNG", "WEBP"];
+    function __photo(img) {
+      var n = +(img.dataset.n || 0);
+      if (n < __photoExt.length) { img.dataset.n = n + 1; img.src = img.dataset.base + "." + __photoExt[n]; }
+      else { img.remove(); }
+    }
+    /* Frames marked data-fit="natural" take the photo's own proportions, so nothing gets cropped. */
+    function __photoFit(img) {
+      var f = img.parentNode;
+      if (f && f.dataset.fit === "natural" && img.naturalWidth) f.style.setProperty("--ratio", img.naturalWidth + " / " + img.naturalHeight);
+    }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header is-solid">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Intelegistics home"><img src="assets/img/logo.png" alt="Intelegistics" width="188" height="58"></a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-panel"><span></span></button>
+    <nav class="nav-panel" id="nav-panel" aria-label="Main">
+      <ul class="nav-menu">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li class="has-dropdown is-active">
+          <button class="nav-link" aria-expanded="false" aria-haspopup="true">Services <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <ul class="dropdown">
+<li><a href="return-logistics.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><div><strong>Reverse Logistics & Returns</strong><span>Program design, assessment, and workflow</span></div></a></li>
+<li><a href="refurbishing.html" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><div><strong>Refurbishment & Lifecycle</strong><span>Device processing, grading, and ITAD</span></div></a></li>
+<li><a href="value-add-services.html"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg><div><strong>Value-Add Services</strong><span>Channels, buyers, partners, and market entry</span></div></a></li>
+          </ul>
+        </li>
+        <li><a class="nav-link" href="what-we-handle.html">What We Handle</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-cta"><a class="btn btn-primary btn-sm" href="contact.html">Contact Us <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero">
+  <div class="texture-grid"></div>
+  <svg class="page-hero-orbit" viewBox="0 0 600 600" aria-hidden="true">
+  <defs><linearGradient id="ph-rf-r" x1="0" x2="1"><stop offset="0" stop-color="#8b95a3" stop-opacity=".2"/><stop offset=".5" stop-color="#e9edf2" stop-opacity=".8"/><stop offset="1" stop-color="#ff4b4f"/></linearGradient></defs>
+  <g fill="none" stroke="rgba(201,212,228,.16)">
+    <circle cx="300" cy="300" r="190"/>
+    <ellipse cx="300" cy="300" rx="140" ry="190"/><ellipse cx="300" cy="300" rx="80" ry="190"/><ellipse cx="300" cy="300" rx="22" ry="190"/>
+    <ellipse cx="300" cy="300" rx="190" ry="16"/><ellipse cx="300" cy="235" rx="178" ry="14"/><ellipse cx="300" cy="365" rx="178" ry="14"/>
+    <ellipse cx="300" cy="175" rx="140" ry="11"/><ellipse cx="300" cy="425" rx="140" ry="11"/>
+  </g>
+  <ellipse cx="300" cy="300" rx="292" ry="78" transform="rotate(-17 300 300)" fill="none" stroke="url(#ph-rf-r)" stroke-width="2.5"/>
+</svg>
+  <div class="container reveal">
+    <nav aria-label="Breadcrumb"><ol class="breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Services</li><li aria-current="page">Refurbishment &amp; Lifecycle</li></ol></nav>
+    <span class="eyebrow">Refurbishment &amp; device lifecycle</span>
+    <h1>Get more devices back to market, <span class="text-red">at a higher grade.</span></h1>
+    <p class="lead">Refurbishment is where recovered value is won or lost. We design and stand up refurbishment and device-processing programs that test, grade, clear, and repair units consistently, then route each one to its best next life.</p>
+    <div class="btn-row"><a class="btn btn-primary" href="contact.html">Plan a refurbishment program <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn btn-ghost" href="what-we-handle.html">What we handle</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-bench" data-fit="natural">
+  <img src="assets/img/photos/refurb-bench.jpg" data-base="assets/img/photos/refurb-bench" alt="Technicians refurbishing smartphones at a repair bench" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
+  <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Technicians refurbishing smartphones at a repair bench</span><code>photos/refurb-bench.jpg or .png</code></figcaption>
+</figure></div>
+  <div class="split-body reveal">
+      <span class="eyebrow">Refurbishment programs</span>
+      <h2>Refurbishment designed to perform at <span class="text-red">real volume</span></h2>
+      <p class="muted">A refurbishment program only works if it holds up at volume. We design the flow from intake through diagnostics, repair, cosmetic restoration, and final quality checks, then set up the device-processing, 3PL, and repair partners to run it.</p>
+      <p class="muted">The goal is simple: fewer units written down, faster turns, and refurbished product that buyers trust.</p>
+      <div class="btn-row"><a class="btn btn-primary" href="contact.html">Discuss your program <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div>
+</div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="texture-grid"></div>
+  <div class="container">
+    <div class="section-head center reveal">
+  <span class="eyebrow">The device lifecycle</span>
+  <h2>Every stage is a chance to <span class="text-red">protect value</span></h2>
+  
+</div>
+    <ol class="flow reveal-stagger"><li><div class="flow-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg></div><h3>Intake &amp; triage</h3><p>Units are logged, identified, and sorted by condition and opportunity.</p></li><li><div class="flow-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h3>Testing &amp; grading</h3><p>Consistent diagnostics and grading standards, so value isn&rsquo;t lost to guesswork.</p></li><li><div class="flow-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Data sanitization</h3><p>Data is securely cleared and documented before any unit moves on.</p></li><li><div class="flow-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Repair &amp; refurbish</h3><p>Targeted repair and cosmetic work where the price difference justifies it.</p></li><li><div class="flow-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></div><h3>Next life</h3><p>Resale, redeployment, parts harvesting, or responsible recycling.</p></li></ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="split split--reverse">
+  <div class="split-media reveal"><figure class="photo-slot" style="--ratio:4 / 3" data-photo-slot="refurb-data-security" data-fit="natural">
+  <img src="assets/img/photos/refurb-data-security.jpg" data-base="assets/img/photos/refurb-data-security" alt="Secure data-wipe station with devices connected" loading="lazy" onload="__photoFit(this)" onerror="__photo(this)">
+  <figcaption class="photo-slot-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><span>Photo: Secure data-wipe station with devices connected</span><code>photos/refurb-data-security.jpg or .png</code></figcaption>
+</figure></div>
+  <div class="split-body reveal">
+      <span class="eyebrow">Data security &amp; ITAD</span>
+      <h2>A chain of custody you can <span class="text-red">stand behind</span></h2>
+      <p class="muted">Every recovered device can carry someone else&rsquo;s data. We build ITAD and refurbishment programs with security designed in from the start: controlled handling, chain-of-custody tracking, and verified data sanitization through qualified partners and tools.</p>
+      <ul class="check-list"><li><span>Chain-of-custody tracking from intake to final disposition</span></li><li><span>Verified data sanitization with documented results</span></li><li><span>Qualified ITAD and recycling partners for end-of-life units</span></li><li><span>Audit-ready records for enterprise and carrier requirements</span></li></ul></div>
+</div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="texture-grid"></div>
+  <div class="container">
+    <div class="section-head center reveal">
+  <span class="eyebrow">Why it matters</span>
+  <h2>What a well-run refurbishment program <span class="text-red">delivers</span></h2>
+  
+</div>
+    <div class="grid grid-4 reveal-stagger">
+      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg></div><h3>Higher recovery</h3><p>More units sold as refurbished instead of written down as parts.</p></div>
+      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Faster turns</h3><p>Less time from intake to sale means less value lost to aging.</p></div>
+      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Lower risk</h3><p>Documented data handling protects your customers and your brand.</p></div>
+      <div class="card"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div><h3>Circular by design</h3><p>Longer device lives and less waste, without giving up margin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-box reveal">
+      <svg class="cta-orbit" viewBox="0 0 600 600" aria-hidden="true">
+  <defs><linearGradient id="c-rf-r" x1="0" x2="1"><stop offset="0" stop-color="#8b95a3" stop-opacity=".2"/><stop offset=".5" stop-color="#e9edf2" stop-opacity=".8"/><stop offset="1" stop-color="#ff4b4f"/></linearGradient></defs>
+  <g fill="none" stroke="rgba(201,212,228,.16)">
+    <circle cx="300" cy="300" r="190"/>
+    <ellipse cx="300" cy="300" rx="140" ry="190"/><ellipse cx="300" cy="300" rx="80" ry="190"/><ellipse cx="300" cy="300" rx="22" ry="190"/>
+    <ellipse cx="300" cy="300" rx="190" ry="16"/><ellipse cx="300" cy="235" rx="178" ry="14"/><ellipse cx="300" cy="365" rx="178" ry="14"/>
+    <ellipse cx="300" cy="175" rx="140" ry="11"/><ellipse cx="300" cy="425" rx="140" ry="11"/>
+  </g>
+  <ellipse cx="300" cy="300" rx="292" ry="78" transform="rotate(-17 300 300)" fill="none" stroke="url(#c-rf-r)" stroke-width="2.5"/>
+</svg>
+      <div style="position:relative">
+        <span class="eyebrow">Let&rsquo;s talk</span>
+        <h2>Let&rsquo;s build a refurbishment program that <span class="text-red">holds up at volume.</span></h2>
+        <p class="lead">Whether you&rsquo;re starting from scratch or fixing a program that isn&rsquo;t delivering, we&rsquo;ll help you design it, line up the right partners, and get it running.</p>
+        <div class="btn-row"><a class="btn btn-primary" href="contact.html">Start a conversation <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+      </div>
+      <div style="position:relative"><ul class="check-list"><li><span>Program design and setup</span></li><li><span>Partner and facility sourcing</span></li><li><span>Grading and QA standards</span></li><li><span>Launch and ramp support</span></li></ul></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="Intelegistics" width="168" height="52" loading="lazy">
+        <p>Designing, operating, and scaling reverse logistics, asset recovery, and secondary-market programs.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#circularity">Circularity</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="what-we-handle.html">What We Handle</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="return-logistics.html">Reverse Logistics &amp; Returns</a></li>
+          <li><a href="refurbishing.html">Asset Recovery &amp; Lifecycle</a></li>
+          <li><a href="value-add-services.html">Value-Add Services</a></li>
+          <li><a href="return-logistics.html#assessment">Operational Assessment</a></li>
+          <li><a href="value-add-services.html#partners">Partner Sourcing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul class="footer-links">
+          <li>Dallas&ndash;Fort Worth, Texas</li>
+          <li>United States &middot; United Kingdom &middot; Middle East &middot; Asia</li>
+          <li data-email-item><a href="#">&nbsp;</a></li>
+        </ul>
+        <div class="social" style="margin-top:1.1rem">
+          <a data-linkedin href="https://www.linkedin.com/company/109301424/" target="_blank" rel="noopener" aria-label="Intelegistics on LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> Intelegistics, Inc. All rights reserved.</span>
+      <span>Circularity that recovers value across the product lifecycle.</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/track.js" defer></script>
+</body>
+</html>
