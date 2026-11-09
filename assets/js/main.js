@@ -9,7 +9,7 @@
    as a fallback if the form can't send. Leave "" to hide it and
    point people to LinkedIn instead.
    ========================================================== */
-const FORM_ENDPOINT = ""; // e.g. "https://script.google.com/macros/s/XXXXXXXX/exec"
+const FORM_ENDPOINT = "https://script.google.com/macros/s/AKfycbxmOdLZ7Hb3yp2NomUx21wCRMiunZjtiwxdO-ufRcQNIJz4Vftmz0VkcR1dtso1fxZ2/exec"; // e.g. "https://script.google.com/macros/s/XXXXXXXX/exec"
 const CONTACT_EMAIL = "";
 const LINKEDIN_URL  = "https://www.linkedin.com/company/109301424/";
 
