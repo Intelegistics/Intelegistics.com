@@ -1,7 +1,7 @@
 Photo slots: each spot on the site loads the file named below from this folder.
 
-All photos are WebP, sized for the web (1400px wide for section photos, 1000px for the
-What We Handle cards). That keeps the whole site's photos under 2 MB, and the site
+Photos use WebP, sized for the web (1400px wide for section photos, 1000px wide for
+image cards). Existing photos are optimized, and the site
 preloads them in the background (assets/js/preload.js) so pages open with photos ready.
 
 Adding or replacing a photo:
@@ -15,8 +15,9 @@ Browsers keep photos cached for up to an hour before checking for a new version,
 a replaced photo can take up to an hour to show for returning visitors (hard-refresh
 to see it immediately).
 
-Side-by-side section photos keep their own shape (no cropping). What We Handle cards
-are shown at 4:3 and cropped to fill.
+Side-by-side section photos keep their own shape (no cropping). What We Handle and
+program cards are shown at 4:3 and cropped to fill. For new card images, use 1000x750px.
+The four program images are installed. Their filename placeholders appear only if an image is missing.
 
 home-who-we-work-with  |  Home  |  aspect 5/4  |  Team sorting returned devices on a processing line
 home-hands-on  |  Home  |  aspect 5/4  |  Operator inspecting and grading a smartphone at a test bench
@@ -24,6 +25,10 @@ returns-assessment  |  Reverse Logistics & Returns  |  aspect 4/3  |  Operations
 returns-program-design  |  Reverse Logistics & Returns  |  aspect 4/3  |  Trade-in devices being sorted by condition
 returns-workflow  |  Reverse Logistics & Returns  |  aspect 4/3  |  Technician at an intake and triage station
 returns-partners-launch  |  Reverse Logistics & Returns  |  aspect 4/3  |  Pallets of returned electronics moving through a 3PL facility
+returns-customer  |  Reverse Logistics & Returns: Customer Returns  |  aspect 4/3  |  Returned products being inspected and sorted for recovery
+returns-trade-in-buyback  |  Reverse Logistics & Returns: Trade-In & Buyback  |  aspect 4/3  |  Devices being evaluated and processed for a trade-in and buyback program
+returns-excess-surplus  |  Reverse Logistics & Returns: Excess & Surplus Inventory  |  aspect 4/3  |  Excess and surplus inventory prepared for secondary-market resale
+returns-end-of-life  |  Reverse Logistics & Returns: End-of-Life Assets  |  aspect 4/3  |  End-of-life equipment sorted for reuse, parts recovery, and recycling
 refurb-bench  |  Refurbishment & Lifecycle  |  aspect 4/3  |  Technicians refurbishing smartphones at a repair bench
 refurb-data-security  |  Refurbishment & Lifecycle  |  aspect 4/3  |  Secure data-wipe station with devices connected
 value-channels  |  Value-Add Services  |  aspect 4/3  |  Pallets of graded devices staged for wholesale buyers

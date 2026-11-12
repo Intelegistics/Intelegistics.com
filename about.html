@@ -119,19 +119,66 @@
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--alt beliefs-section" id="principles" aria-labelledby="principles-title">
   <div class="texture-grid"></div>
   <div class="container">
     <div class="section-head center reveal">
   <span class="eyebrow">What we believe</span>
-  <h2>The principles behind <span class="text-red">every program.</span></h2>
+  <h2 id="principles-title">The principles behind <span class="text-red">every program.</span></h2>
   <p class="lead">Three principles shape how we design, implement, and operate programs that deliver measurable results.</p>
 </div>
-    <div class="grid grid-3 reveal-stagger">
-      <div class="card principle"><div class="icon-tile icon-tile--glow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg></div><h3>Make value visible</h3><p>Every unnecessary touch, downgraded unit, and idle inventory erodes margin. We identify where value is lost and build processes to recover it.</p></div>
-      <div class="card principle"><div class="icon-tile icon-tile--glow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div><h3>Engineer for scale</h3><p>A program must perform beyond the pilot. We design workflows, infrastructure, and operating controls that maintain quality, throughput, and cost efficiency as volumes grow.</p></div>
-      <div class="card principle"><div class="icon-tile icon-tile--glow"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>Do, don&rsquo;t just advise</h3><p>We bring both strategy and execution&mdash;building the process, connecting the right partners, solving constraints, and staying hands-on until it performs.</p></div>
-    </div>
+    <ol class="beliefs-board reveal-stagger" role="list">
+      <li class="belief">
+        <div class="belief-label"><span class="belief-number" aria-hidden="true">01</span><span>Visibility</span></div>
+        <div class="belief-visual" aria-hidden="true">
+          <svg class="belief-art" viewBox="0 0 280 184" fill="none" focusable="false" aria-hidden="true">
+            <path class="belief-art-guide" d="M12 150h256M32 25v125m54-125v125m54-125v125m54-125v125m54-125v125"/>
+            <rect class="belief-art-panel" x="28" y="42" width="224" height="96" rx="8"/>
+            <path class="belief-art-wire" d="M44 62h49M44 76h34M44 102h12m8 0h12m8 0h9M44 116h49"/>
+            <path class="belief-art-route" d="M105 110h28V87h28v23h59"/>
+            <circle class="belief-art-lens" cx="178" cy="78" r="39"/>
+            <path class="belief-art-silver" d="M155 99V83h13V69h14v14h15V58"/>
+            <path class="belief-art-accent" d="m190 58 7-7 7 7m-2 52 32 32"/>
+            <circle class="belief-art-point" cx="197" cy="58" r="4"/>
+            <path class="belief-art-wire" d="M52 158h94m8 0h22m8 0h40"/>
+          </svg>
+        </div>
+        <div class="belief-copy"><h3>Make value visible</h3><p>Every unnecessary touch, downgraded unit, and idle inventory erodes margin. We identify where value is lost and build processes to recover it.</p></div>
+      </li>
+      <li class="belief">
+        <div class="belief-label"><span class="belief-number" aria-hidden="true">02</span><span>Scalability</span></div>
+        <div class="belief-visual" aria-hidden="true">
+          <svg class="belief-art" viewBox="0 0 280 184" fill="none" focusable="false" aria-hidden="true">
+            <path class="belief-art-guide" d="M12 42h256M12 92h256M12 142h256"/>
+            <path class="belief-art-wire" d="M67 92h37V42h39M104 92h39m-39 0v50h39M191 42h32v50m-32 0h32m-32 50h32V92h30"/>
+            <path class="belief-art-route" d="M67 92h76m48 0h62"/>
+            <rect class="belief-art-module" x="23" y="72" width="44" height="40" rx="6"/>
+            <g class="belief-art-panel"><rect x="143" y="25" width="48" height="34" rx="5"/><rect x="143" y="75" width="48" height="34" rx="5"/><rect x="143" y="125" width="48" height="34" rx="5"/></g>
+            <g class="belief-art-silver"><path d="M35 85h20m-20 7h20m-20 7h13m107-57 5 5 10-11m-15 56 5 5 10-11m-15 56 5 5 10-11"/></g>
+            <path class="belief-art-accent" d="m246 85 7 7-7 7"/>
+            <circle class="belief-art-point" cx="104" cy="92" r="4"/><circle class="belief-art-point" cx="223" cy="92" r="4"/>
+          </svg>
+        </div>
+        <div class="belief-copy"><h3>Engineer for scale</h3><p>A program must perform beyond the pilot. We design workflows, infrastructure, and operating controls that maintain quality, throughput, and cost efficiency as volumes grow.</p></div>
+      </li>
+      <li class="belief">
+        <div class="belief-label"><span class="belief-number" aria-hidden="true">03</span><span>Execution</span></div>
+        <div class="belief-visual" aria-hidden="true">
+          <svg class="belief-art" viewBox="0 0 280 184" fill="none" focusable="false" aria-hidden="true">
+            <path class="belief-art-guide" d="M12 150h256M12 36h256"/>
+            <path class="belief-art-panel" d="M28 27h62l17 17v109H28Z"/>
+            <path class="belief-art-wire" d="M90 27v17h17M42 55h42m-42 9h29M46 84h19v17H46Zm19 9h20v24H65m-19 0h19"/>
+            <path class="belief-art-route" d="M107 92h28V61h42v62h48"/>
+            <rect class="belief-art-module" x="155" y="39" width="44" height="44" rx="7"/>
+            <rect class="belief-art-module" x="203" y="101" width="44" height="44" rx="7"/>
+            <path class="belief-art-silver" d="m167 61 7 7 13-15m28 70 7 7 13-15"/>
+            <path class="belief-art-accent" d="m129 86 6 6-6 6"/>
+            <circle class="belief-art-point" cx="177" cy="92" r="4"/>
+          </svg>
+        </div>
+        <div class="belief-copy"><h3>Do, don&rsquo;t just advise</h3><p>We bring both strategy and execution&mdash;building the process, connecting the right partners, solving constraints, and staying hands-on until it performs.</p></div>
+      </li>
+    </ol>
   </div>
 </section>
 
@@ -161,36 +208,167 @@
   </div>
 </section>
 
-<section class="section section--alt">
+<section class="section section--alt about-capabilities" id="about-services" aria-labelledby="about-services-title">
   <div class="texture-grid"></div>
   <div class="container">
-    <div class="section-head center reveal">
+    <div class="capabilities-heading reveal">
   <span class="eyebrow">What we do</span>
-  <h2>Five services, <span class="text-red">one goal</span></h2>
+  <h2 id="about-services-title">Five services, <span class="text-red">one goal</span></h2>
   <p class="lead">Recover more value from every unit that comes back.</p>
 </div>
-    <div class="services-grid reveal-stagger">
-      <a class="card" href="return-logistics.html"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg></div><h3>Program design</h3><p>Reverse logistics, trade-in, and refurbishment program design.</p><span class="link-arrow">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-      <a class="card" href="return-logistics.html#assessment"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div><h3>Operational assessment</h3><p>Workflow design and process improvement that target where value leaks.</p><span class="link-arrow">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-      <a class="card" href="value-add-services.html#channels"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></svg></div><h3>Channel strategy</h3><p>Business development and channel strategy for recovered product.</p><span class="link-arrow">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-      <a class="card" href="value-add-services.html#secondary-markets"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Secondary-market sales</h3><p>Secondary-market, wholesale, and export sales strategy.</p><span class="link-arrow">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-      <a class="card" href="value-add-services.html#partners"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="6" rx="1.5"/><rect x="2" y="16" width="6" height="6" rx="1.5"/><rect x="16" y="16" width="6" height="6" rx="1.5"/><path d="M12 8v4"/><path d="M5 16v-2a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v2"/></svg></div><h3>Partner sourcing</h3><p>3PL, processing, technology, and downstream partner sourcing.</p><span class="link-arrow">Learn more <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-    </div>
+    <ul class="capability-grid reveal-stagger" role="list">
+      <li>
+        <a class="capability capability--featured" href="return-logistics.html" aria-labelledby="about-service-1">
+          <div class="capability-top"><span class="capability-number" aria-hidden="true">01</span><span class="capability-kicker">Build the foundation</span></div>
+          <div class="capability-visual"><svg class="capability-feature-art" viewBox="0 0 300 240" fill="none" aria-hidden="true" focusable="false">
+              <path class="service-guide" d="M18 32h264M18 88h264M18 144h264M18 200h264M38 16v204m56-204v204m56-204v204m56-204v204m56-204v204"/>
+              <path class="service-node" d="M48 30h153l29 29v149H48Z"/>
+              <path class="service-line" d="M201 30v29h29M67 53h85m-85 12h56"/>
+              <path class="service-route" d="M98 101h90v70h-90"/>
+              <rect class="service-node" x="70" y="86" width="56" height="32" rx="5"/>
+              <path class="service-line" d="M81 98h34m-34 8h23"/>
+              <rect class="service-node service-node--accent" x="160" y="154" width="56" height="34" rx="5"/>
+              <path class="service-accent" d="m175 170 8 8 17-19"/>
+              <circle class="service-point" cx="188" cy="101" r="8"/><circle class="service-point" cx="98" cy="171" r="8"/>
+              <path class="service-line" d="M32 92H18v91h30m182-96h29v65h22"/>
+              <path class="service-accent" d="m274 145 7 7-7 7M65 220h170"/>
+            </svg></div>
+          <div class="capability-copy"><h3 id="about-service-1">Program design</h3><p>Reverse logistics, trade-in, and refurbishment program design.</p></div>
+          <span class="capability-link">Learn more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a class="capability capability--compact" href="return-logistics.html#assessment" aria-labelledby="about-service-2">
+          <div class="capability-top"><span class="capability-number" aria-hidden="true">02</span><svg class="capability-art" viewBox="0 0 120 100" fill="none" aria-hidden="true" focusable="false">
+
+            <path class="service-guide" d="M8 25h104M8 50h104M8 75h104"/><path class="service-line" d="M13 50h94"/>
+            <rect class="service-node" x="10" y="39" width="22" height="22" rx="4"/><rect class="service-node" x="48" y="39" width="22" height="22" rx="4"/><rect class="service-node" x="86" y="39" width="22" height="22" rx="4"/>
+            <circle class="service-lens" cx="59" cy="50" r="26"/><path class="service-route" d="m78 69 19 19"/><path class="service-accent" d="M54 50h10m-5-5v10"/>
+          </svg></div>
+          <div class="capability-copy"><h3 id="about-service-2">Operational assessment</h3><p>Workflow design and process improvement that target where value leaks.</p></div>
+          <span class="capability-link">Learn more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a class="capability capability--compact" href="value-add-services.html#channels" aria-labelledby="about-service-3">
+          <div class="capability-top"><span class="capability-number" aria-hidden="true">03</span><svg class="capability-art" viewBox="0 0 120 100" fill="none" aria-hidden="true" focusable="false">
+
+            <path class="service-guide" d="M6 18h108M6 50h108M6 82h108"/>
+            <path class="service-line" d="M29 50h25V18h34M54 50h34M54 50v32h34"/><path class="service-route" d="M29 50h25V18h34"/>
+            <rect class="service-node service-node--accent" x="8" y="38" width="24" height="24" rx="5"/>
+            <rect class="service-node" x="88" y="8" width="24" height="20" rx="4"/><rect class="service-node" x="88" y="40" width="24" height="20" rx="4"/><rect class="service-node" x="88" y="72" width="24" height="20" rx="4"/>
+            <circle class="service-point" cx="54" cy="50" r="4"/><path class="service-accent" d="m94 18 4 4 7-8"/>
+          </svg></div>
+          <div class="capability-copy"><h3 id="about-service-3">Channel strategy</h3><p>Business development and channel strategy for recovered product.</p></div>
+          <span class="capability-link">Learn more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a class="capability capability--compact" href="value-add-services.html#secondary-markets" aria-labelledby="about-service-4">
+          <div class="capability-top"><span class="capability-number" aria-hidden="true">04</span><svg class="capability-art" viewBox="0 0 120 100" fill="none" aria-hidden="true" focusable="false">
+
+            <path class="service-guide" d="M8 82h104M8 18h104"/>
+            <g class="service-node"><rect x="10" y="28" width="28" height="44" rx="5"/><rect x="82" y="28" width="28" height="44" rx="5"/></g>
+            <path class="service-line" d="M18 38h12m-12 7h12m-12 7h8"/><path class="service-route" d="M42 42h33m-6-6 6 6-6 6M78 61H45m6-6-6 6 6 6"/>
+            <circle class="service-point" cx="96" cy="49" r="8"/><path class="service-accent" d="m92 49 3 3 5-6"/>
+          </svg></div>
+          <div class="capability-copy"><h3 id="about-service-4">Secondary-market sales</h3><p>Secondary-market, wholesale, and export sales strategy.</p></div>
+          <span class="capability-link">Learn more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </li>
+      <li>
+        <a class="capability capability--compact" href="value-add-services.html#partners" aria-labelledby="about-service-5">
+          <div class="capability-top"><span class="capability-number" aria-hidden="true">05</span><svg class="capability-art" viewBox="0 0 120 100" fill="none" aria-hidden="true" focusable="false">
+
+            <circle class="service-guide" cx="60" cy="50" r="37"/><path class="service-line" d="m30 22 30 28 30-28M60 50 30 78m30-28 30 28"/>
+            <path class="service-route" d="M30 22 60 50l30 28"/>
+            <rect class="service-node" x="20" y="12" width="20" height="20" rx="5"/><rect class="service-node" x="80" y="12" width="20" height="20" rx="5"/><rect class="service-node" x="20" y="68" width="20" height="20" rx="5"/><rect class="service-node" x="80" y="68" width="20" height="20" rx="5"/>
+            <circle class="service-node service-node--accent" cx="60" cy="50" r="15"/><path class="service-accent" d="m53 50 5 5 9-10"/>
+          </svg></div>
+          <div class="capability-copy"><h3 id="about-service-5">Partner sourcing</h3><p>3PL, processing, technology, and downstream partner sourcing.</p></div>
+          <span class="capability-link">Learn more <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span>
+        </a>
+      </li>
+    </ul>
   </div>
 </section>
 
-<section class="section">
+<section class="section experience-section" id="about-experience" aria-labelledby="about-experience-title">
   <div class="container">
     <div class="section-head center reveal">
   <span class="eyebrow">Experience in action</span>
-  <h2>Where strategy meets <span class="text-red">commercial execution.</span></h2>
+  <h2 id="about-experience-title">Where strategy meets <span class="text-red">commercial execution.</span></h2>
   <p class="lead">Supporting businesses across reverse logistics, technology, asset recovery, and secondary markets through go-to-market strategy, operational implementation, U.S. market development, strategic partnerships, and commercial execution.</p>
 </div>
-    <ul class="exp-grid reveal-stagger">
-      <li class="exp-card"><div class="exp-top"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></svg></div><span class="exp-tag exp-tag--current">Current Advisory Engagement</span></div><h3>Global Device Lifecycle Technology Provider</h3><p>Supporting go-to-market strategy, technology integration, and operational deployment across device lifecycle programs.</p></li>
-      <li class="exp-card"><div class="exp-top"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span class="exp-tag ">Recent Advisory Engagement</span></div><h3>International Electronics Trading Group</h3><p>U.S. market entry, logistics infrastructure, strategic partnerships, and commercial channel development.</p></li>
-      <li class="exp-card"><div class="exp-top"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg></div><span class="exp-tag exp-tag--silver">Owned Commerce &amp; Resale Venture</span></div><h3>Elm Fork Coins &amp; Liquidations</h3><p>Direct participation in collectibles, liquidation inventory, online marketplaces, and secondary-market sales.</p></li>
-      <li class="exp-card"><div class="exp-top"><div class="icon-tile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div><span class="exp-tag exp-tag--silver">Previous Executive Leadership</span></div><h3>Reverse Logistics &amp; Recommerce Operator</h3><p>Executive responsibility across North American operations, business development, and recovered-product commercialization.</p></li>
+    <ul class="engagement-portfolio reveal-stagger" role="list">
+      <li class="engagement engagement--featured">
+        <div class="engagement-body">
+          <span class="engagement-type">Current Advisory Engagement</span>
+          <h3>Global Device Lifecycle Technology Provider</h3>
+          <p>Supporting go-to-market strategy, technology integration, and operational deployment across device lifecycle programs.</p>
+          <ul role="list" class="engagement-focus" aria-label="Engagement focus"><li>Go-to-market</li><li>Technology integration</li><li>Deployment</li></ul>
+        </div>
+        <div class="engagement-visual">
+          <svg class="engagement-feature-art" viewBox="0 0 520 320" fill="none" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="about-engagement-device-face" x1="220" y1="55" x2="320" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#344457"/><stop offset="1" stop-color="#111a26"/></linearGradient>
+              <linearGradient id="about-engagement-platform" x1="130" y1="195" x2="390" y2="280" gradientUnits="userSpaceOnUse"><stop stop-color="#2b394b"/><stop offset="1" stop-color="#141d2a"/></linearGradient>
+              <radialGradient id="about-engagement-halo"><stop stop-color="#dc1f26" stop-opacity=".16"/><stop offset="1" stop-color="#dc1f26" stop-opacity="0"/></radialGradient>
+            </defs>
+            <ellipse cx="267" cy="180" rx="235" ry="140" fill="url(#about-engagement-halo)"/>
+            <g class="engagement-art-guide"><path d="m48 192 211-115 213 115-211 115Z"/><path d="m94 192 165-89 167 89-165 89Z"/><path d="M259 77v230M48 192h424"/></g>
+            <path d="m126 218 133-73 135 73v16l-135 73-133-73Z" fill="#111924" stroke="#43546b"/>
+            <path d="m126 218 133-73 135 73-135 73Z" fill="url(#about-engagement-platform)" stroke="#718096"/>
+            <path d="m159 212 100-54 102 54-102 55Z" fill="#1c2838" stroke="#9ba8bb"/>
+            <path class="engagement-art-red" d="m159 212 100 55 102-55M259 267v24"/>
+            <path class="engagement-art-wire" d="M203 202h-58v-69H96m222 69h50v-89h49M259 47V27h74"/>
+            <g class="engagement-art-terminal"><rect x="72" y="120" width="38" height="26" rx="5"/><rect x="404" y="100" width="38" height="26" rx="5"/><rect x="332" y="14" width="38" height="26" rx="5"/></g>
+            <g class="engagement-art-red"><path d="M82 133h18m-9-6v12m323-26 5 5 11-11m-89-80h19m-19 5h12"/></g>
+            <rect x="216" y="46" width="86" height="168" rx="14" fill="url(#about-engagement-device-face)" stroke="#b4c0d1" stroke-width="1.5"/>
+            <rect x="224" y="65" width="70" height="126" rx="7" fill="#162130" stroke="#52647c"/>
+            <path class="engagement-art-wire" d="M245 55h28m-26 148h24"/>
+            <circle cx="259" cy="126" r="25" fill="#253040" stroke="#65778e"/>
+            <path class="engagement-art-red" d="M243 126a16 16 0 0 1 27-12l4 4m0-9v9h-9m10 8a16 16 0 0 1-27 12l-4-4m0 9v-9h9"/>
+            <g class="engagement-art-point"><circle cx="145" cy="202" r="4"/><circle cx="368" cy="202" r="4"/><circle cx="259" cy="27" r="4"/></g>
+          </svg>
+        </div>
+      </li>
+      <li class="engagement engagement--support engagement--recent">
+        <div class="engagement-visual"><svg class="engagement-emblem" viewBox="0 0 220 112" fill="none" aria-hidden="true" focusable="false">
+            <g class="engagement-art-guide"><path d="M12 56h196"/><ellipse cx="110" cy="56" rx="79" ry="43"/></g>
+            <g class="engagement-art-wire"><circle cx="110" cy="56" r="42"/><ellipse cx="110" cy="56" rx="20" ry="42"/><path d="M68 56h84m-78-21h72m-72 42h72"/></g>
+            <path class="engagement-art-red" d="M45 81c36 15 92-5 130-54m-8 0h8v8"/>
+            <g class="engagement-art-point"><circle cx="80" cy="72" r="4"/><circle cx="140" cy="39" r="4"/></g>
+          </svg></div>
+        <span class="engagement-type">Recent Advisory Engagement</span>
+        <h3>International Electronics Trading Group</h3>
+        <p>U.S. market entry, logistics infrastructure, strategic partnerships, and commercial channel development.</p>
+      </li>
+      <li class="engagement engagement--support engagement--venture">
+        <div class="engagement-visual"><svg class="engagement-emblem" viewBox="0 0 220 112" fill="none" aria-hidden="true" focusable="false">
+            <path class="engagement-art-guide" d="M14 94h192M25 28h170"/>
+            <path class="engagement-art-terminal" d="m111 37 31-16 41 22v43l-31 16-41-22Z"/>
+            <path class="engagement-art-wire" d="m111 37 41 22 31-16m-31 16v43m-26-73 42 22v14"/>
+            <path class="engagement-art-terminal" d="M43 67v13c0 10 17 18 38 18s38-8 38-18V67"/>
+            <ellipse class="engagement-art-wire" cx="81" cy="67" rx="38" ry="18"/><ellipse class="engagement-art-red" cx="81" cy="67" rx="28" ry="12"/>
+            <path class="engagement-art-red" d="m74 67 5 4 10-8"/>
+          </svg></div>
+        <span class="engagement-type">Owned Commerce &amp; Resale Venture</span>
+        <h3>Elm Fork Coins &amp; Liquidations</h3>
+        <p>Direct participation in collectibles, liquidation inventory, online marketplaces, and secondary-market sales.</p>
+      </li>
+      <li class="engagement engagement--support engagement--leadership">
+        <div class="engagement-visual"><svg class="engagement-emblem" viewBox="0 0 220 112" fill="none" aria-hidden="true" focusable="false">
+            <path class="engagement-art-guide" d="M14 94h192M20 55h180"/>
+            <path class="engagement-art-terminal" d="M50 94V39l60-26 60 26v55Z"/>
+            <path class="engagement-art-wire" d="M50 39h120M66 94V55h24v39m8 0V55h24v39m8 0V55h24v39"/>
+            <path class="engagement-art-red" d="M36 102h148m-6-6 6 6-6 6M87 28h46"/>
+            <g class="engagement-art-point"><circle cx="78" cy="75" r="4"/><circle cx="110" cy="75" r="4"/><circle cx="142" cy="75" r="4"/></g>
+          </svg></div>
+        <span class="engagement-type">Previous Executive Leadership</span>
+        <h3>Reverse Logistics &amp; Recommerce Operator</h3>
+        <p>Executive responsibility across North American operations, business development, and recovered-product commercialization.</p>
+      </li>
     </ul>
     <p class="fine center reveal">Selected engagements are described by industry and scope to respect client confidentiality and commercial relationships.</p>
   </div>

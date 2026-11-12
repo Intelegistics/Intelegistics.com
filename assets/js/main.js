@@ -25,23 +25,53 @@ const LINKEDIN_URL  = "https://www.linkedin.com/company/109301424/";
 
   /* ---- Mobile nav ---- */
   const toggle = document.querySelector(".nav-toggle");
+  const navPanel = document.querySelector(".nav-panel");
   const closeNav = () => {
+    const restoreFocus = document.body.classList.contains("nav-open") &&
+      navPanel && navPanel.contains(document.activeElement);
     document.body.classList.remove("nav-open");
-    toggle && toggle.setAttribute("aria-expanded", "false");
+    document.querySelectorAll(".has-dropdown.is-open").forEach((dropdown) => {
+      dropdown.classList.remove("is-open");
+      dropdown.querySelector(".nav-link").setAttribute("aria-expanded", "false");
+    });
+    if (toggle) {
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Open menu");
+      if (restoreFocus && window.innerWidth <= 960) toggle.focus();
+    }
   };
   if (toggle) {
     toggle.addEventListener("click", () => {
-      const open = document.body.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", String(open));
+      if (document.body.classList.contains("nav-open")) {
+        closeNav();
+        return;
+      }
+      document.body.classList.add("nav-open");
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
+      toggle.focus({ preventScroll: true });
+    });
+  }
+  if (navPanel) {
+    navPanel.addEventListener("click", (event) => {
+      if (event.target.closest("a")) closeNav();
     });
   }
   document.addEventListener("keydown", (e) => {
+    if (e.key === "Tab" && document.body.classList.contains("nav-open")) {
+      const navItems = Array.from(navPanel.querySelectorAll('a[href], button:not([disabled])'))
+        .filter((element) => element.getClientRects().length);
+      const lastItem = navItems[navItems.length - 1];
+      if (e.shiftKey && document.activeElement === toggle && lastItem) {
+        e.preventDefault();
+        lastItem.focus();
+      } else if (!e.shiftKey && document.activeElement === lastItem) {
+        e.preventDefault();
+        toggle.focus();
+      }
+    }
     if (e.key === "Escape") {
       closeNav();
-      document.querySelectorAll(".has-dropdown.is-open").forEach((d) => {
-        d.classList.remove("is-open");
-        d.querySelector(".nav-link").setAttribute("aria-expanded", "false");
-      });
     }
   });
   window.addEventListener("resize", () => { if (window.innerWidth > 960) closeNav(); });

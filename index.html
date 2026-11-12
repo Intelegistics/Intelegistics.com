@@ -136,7 +136,8 @@
   <h2 id="hidden-cost-title">The reverse side of the supply chain is where margin <span class="text-red">quietly disappears.</span></h2>
   <p class="lead">Much of that leakage never shows up clearly on the P&amp;L. It builds up in four places.</p>
 </div>
-    <div class="leak-grid reveal-stagger">
+    <div class="leak-carousel reveal" data-leak-carousel role="group" aria-roledescription="carousel" aria-label="Four sources of value leakage">
+    <div class="leak-grid" id="leak-slides" tabindex="0" aria-label="Value leakage cards. Use the left and right arrow keys to browse.">
       <article class="leak">
         <div class="leak-copy">
           <div class="leak-label"><span class="leak-number" aria-hidden="true">01</span><span>Cost creep</span></div>
@@ -221,6 +222,15 @@
           </svg>
         </div>
       </article>
+    </div>
+      <div class="leak-controls" hidden>
+        <p class="leak-status" aria-live="polite" aria-atomic="true"><span data-leak-count aria-hidden="true">1–2 / 4</span><span class="sr-only" data-leak-announcement></span></p>
+        <div class="leak-pagination" role="group" aria-label="Choose cards"></div>
+        <div class="leak-navigation">
+          <button class="leak-button" type="button" data-leak-prev aria-label="Previous cards" aria-controls="leak-slides"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+          <button class="leak-button" type="button" data-leak-next aria-label="Next cards" aria-controls="leak-slides"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
     </div>
     <p class="statement reveal">We help companies see where value is created, delayed, or lost across the product lifecycle, then build practical programs that perform under <span class="text-red">real operating volume.</span></p>
   </div>
@@ -582,6 +592,7 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/leak-carousel.js" defer></script>
 <script src="assets/js/preload.js" defer></script>
 <script src="assets/js/track.js" defer></script>
 </body>
