@@ -1,14 +1,16 @@
-/* Phone-only categories: continuous 24px/second motion with explicit Pause/Play. */
+/* Phone-only card slideshows: continuous 24px/second motion with explicit Pause/Play. */
 (function () {
-  document.querySelectorAll('[data-device-slideshow]').forEach((slideshow, slideshowIndex) => {
-    const track = slideshow.querySelector('.device-grid');
+  document.querySelectorAll('[data-device-slideshow], [data-card-slideshow]').forEach((slideshow, slideshowIndex) => {
+    const track = slideshow.querySelector('[data-slideshow-track], .device-grid');
     const cards = Array.from(track.children);
-    const controls = slideshow.querySelector('.device-controls');
-    const status = slideshow.querySelector('[data-device-status]');
-    const count = slideshow.querySelector('[data-device-count]');
-    const rotation = slideshow.querySelector('[data-device-rotation]');
-    const pauseIcon = rotation.querySelector('[data-device-pause]');
-    const playIcon = rotation.querySelector('[data-device-play]');
+    const controls = slideshow.querySelector('[data-slideshow-controls], .device-controls');
+    const status = slideshow.querySelector('[data-slideshow-status], [data-device-status]');
+    const count = slideshow.querySelector('[data-slideshow-count], [data-device-count]');
+    const rotation = slideshow.querySelector('[data-slideshow-rotation], [data-device-rotation]');
+    const pauseIcon = rotation.querySelector('[data-slideshow-pause], [data-device-pause]');
+    const playIcon = rotation.querySelector('[data-slideshow-play], [data-device-play]');
+    const label = slideshow.getAttribute('data-slideshow-label') || 'Device categories, alphabetically ordered';
+    const trackLabel = slideshow.getAttribute('data-slideshow-track-label') || 'Device categories. Use left and right arrow keys to browse.';
     const mobile = window.matchMedia('(max-width: 640px)');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const speed = 24;
@@ -171,10 +173,10 @@
         track.prepend(...before);
         track.append(...after);
         track.setAttribute('tabindex', '0');
-        track.setAttribute('aria-label', 'Device categories. Use left and right arrow keys to browse.');
+        track.setAttribute('aria-label', trackLabel);
         slideshow.setAttribute('role', 'group');
         slideshow.setAttribute('aria-roledescription', 'carousel');
-        slideshow.setAttribute('aria-label', 'Device categories, alphabetically ordered');
+        slideshow.setAttribute('aria-label', label);
         cards.forEach((card, cardIndex) => {
           card.setAttribute('role', 'group');
           card.setAttribute('aria-roledescription', 'slide');
@@ -204,8 +206,8 @@
       syncPlayback();
     };
 
-    slideshow.querySelector('[data-device-prev]').addEventListener('click', () => navigate(-1));
-    slideshow.querySelector('[data-device-next]').addEventListener('click', () => navigate(1));
+    slideshow.querySelector('[data-slideshow-prev], [data-device-prev]').addEventListener('click', () => navigate(-1));
+    slideshow.querySelector('[data-slideshow-next], [data-device-next]').addEventListener('click', () => navigate(1));
     rotation.addEventListener('click', () => {
       if (!active) return;
       stopAll();

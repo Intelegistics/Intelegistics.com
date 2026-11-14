@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Intelegistics, Inc. | Reverse Logistics, Circularity & Device Lifecycle</title>
   <meta name="description" content="Intelegistics designs, launches, and scales circularity, reverse logistics, trade-in, repair, refurbishment, ITAD, and secondary-market programs that turn returned assets into recovered value.">
-  <link rel="canonical" href="https://www.intelegistics.com/">
-  <meta property="og:url" content="https://www.intelegistics.com/">
   <meta name="theme-color" content="#0f141b">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Intelegistics, Inc.">
@@ -32,8 +30,7 @@
       if (f && f.dataset.fit === "natural" && img.naturalWidth) f.style.setProperty("--ratio", img.naturalWidth + " / " + img.naturalHeight);
     }
   </script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Intelegistics, Inc.", "url": "https://www.intelegistics.com/", "logo": "https://www.intelegistics.com/assets/img/logo-mark.png", "foundingDate": "2002", "description": "Advisory and operating practice focused on reverse logistics, device lifecycle management, ITAD, secondary markets, and circular-economy programs.", "areaServed": ["United States", "United Kingdom", "Middle East", "Asia"], "address": {"@type": "PostalAddress", "addressRegion": "TX", "addressLocality": "Dallas-Fort Worth", "addressCountry": "US"}, "sameAs": ["https://www.linkedin.com/company/109301424/"]}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Intelegistics", "alternateName": "Intelegistics, Inc.", "url": "https://www.intelegistics.com/"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Intelegistics, Inc.", "foundingDate": "2002", "description": "Advisory and operating practice focused on reverse logistics, device lifecycle management, ITAD, secondary markets, and circular-economy programs.", "areaServed": ["United States", "United Kingdom", "Middle East", "Asia"], "address": {"@type": "PostalAddress", "addressRegion": "TX", "addressLocality": "Dallas-Fort Worth", "addressCountry": "US"}, "sameAs": ["https://www.linkedin.com/company/109301424/"]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -139,8 +136,8 @@
   <h2 id="hidden-cost-title">The reverse side of the supply chain is where margin <span class="text-red">quietly disappears.</span></h2>
   <p class="lead">Much of that leakage never shows up clearly on the P&amp;L. It builds up in four places.</p>
 </div>
-    <div class="leak-carousel reveal" data-leak-carousel role="group" aria-roledescription="carousel" aria-label="Four sources of value leakage">
-    <div class="leak-grid" id="leak-slides" tabindex="0" aria-label="Value leakage cards. Use the left and right arrow keys to browse.">
+    <div class="leak-carousel reveal" data-card-slideshow data-slideshow-label="Four sources of value leakage" data-slideshow-track-label="Value leakage cards. Use left and right arrow keys to browse.">
+    <div class="leak-grid" id="leak-slides" data-slideshow-track>
       <article class="leak">
         <div class="leak-copy">
           <div class="leak-label"><span class="leak-number" aria-hidden="true">01</span><span>Cost creep</span></div>
@@ -226,12 +223,12 @@
         </div>
       </article>
     </div>
-      <div class="leak-controls" hidden>
-        <p class="leak-status" aria-live="polite" aria-atomic="true"><span data-leak-count aria-hidden="true">1–2 / 4</span><span class="sr-only" data-leak-announcement></span></p>
-        <div class="leak-pagination" role="group" aria-label="Choose cards"></div>
+      <div class="leak-controls" data-slideshow-controls hidden>
+        <p class="leak-status" data-slideshow-status aria-live="off" aria-atomic="true"><span data-slideshow-count>1 / 4</span></p>
         <div class="leak-navigation">
-          <button class="leak-button" type="button" data-leak-prev aria-label="Previous cards" aria-controls="leak-slides"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
-          <button class="leak-button" type="button" data-leak-next aria-label="Next cards" aria-controls="leak-slides"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          <button class="leak-button" type="button" data-slideshow-prev aria-label="Previous value leakage card" aria-controls="leak-slides"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></button>
+          <button class="leak-button" type="button" data-slideshow-rotation aria-label="Pause automatic slideshow" aria-controls="leak-slides"><svg data-slideshow-pause viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg><svg data-slideshow-play viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden><path d="m9 5 10 7-10 7Z"/></svg></button>
+          <button class="leak-button" type="button" data-slideshow-next aria-label="Next value leakage card" aria-controls="leak-slides"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
         </div>
       </div>
     </div>
@@ -595,7 +592,7 @@
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/leak-carousel.js" defer></script>
+<script src="assets/js/device-slideshow.js" defer></script>
 <script src="assets/js/preload.js" defer></script>
 <script src="assets/js/track.js" defer></script>
 </body>
