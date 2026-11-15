@@ -1543,6 +1543,35 @@ a.card:hover::before, .card.is-hover:hover::before { opacity: 1; }
   .device-navigation { display: flex; gap: .5rem; }
 }
 
+/* Shared mobile slideshows for the service and program panels. */
+.card-slideshow { min-width: 0; }
+.card-slideshow-controls { display: none; }
+.card-slideshow-controls[hidden], .card-slideshow-controls svg[hidden] { display: none; }
+.card-slideshow-status { margin: 0; color: var(--silver-2); font-size: .85rem; font-variant-numeric: tabular-nums; }
+.card-slideshow-navigation { display: flex; gap: .5rem; }
+@media (max-width: 640px) {
+  .card-slideshow [data-slideshow-track] {
+    --slideshow-gap: .75rem; --slideshow-peek: clamp(.75rem, 4vw, 1.375rem);
+    --slideshow-inset: calc(var(--slideshow-peek) + var(--slideshow-gap));
+    display: grid; grid-template-columns: none; grid-auto-flow: column;
+    grid-auto-columns: calc(100% - var(--slideshow-inset) - var(--slideshow-inset));
+    gap: var(--slideshow-gap); padding: 0; margin: 0;
+    overflow-x: auto; overscroll-behavior-x: contain;
+    scroll-padding-inline: var(--slideshow-inset);
+    scroll-snap-type: x mandatory; scroll-behavior: auto; scrollbar-width: thin;
+    border-radius: var(--radius);
+  }
+  .card-slideshow.is-enhanced [data-slideshow-track] { scrollbar-width: none; }
+  .card-slideshow.is-enhanced [data-slideshow-track]::-webkit-scrollbar { display: none; }
+  .card-slideshow [data-slideshow-track].is-moving { scroll-snap-type: none; }
+  .card-slideshow [data-slideshow-track] > * { min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; }
+  .card-slideshow [data-slideshow-track]:focus-visible { outline-offset: 5px; }
+  .card-slideshow-controls:not([hidden]) { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1rem; }
+  .card-slideshow .value-service { grid-template-columns: minmax(0, 1fr) 144px; padding: 1.25rem; column-gap: .75rem; }
+  .card-slideshow .value-service-number { font-size: 1.5rem; }
+  .card-slideshow .value-service-number::after { display: none; }
+}
+
 /* ---------- CTA band ---------- */
 .cta-band { padding: var(--section-space) 0; }
 .cta-box {

@@ -32,6 +32,27 @@
     let clones = [];
     let renderedPlaying;
 
+    const rememberAttributes = (element, names) => {
+      const attributes = names.map((name) => [name, element.getAttribute(name)]);
+      return () => attributes.forEach(([name, value]) => {
+        if (value === null) element.removeAttribute(name);
+        else element.setAttribute(name, value);
+      });
+    };
+    const restoreTrack = rememberAttributes(track, ['tabindex', 'role', 'aria-label', 'aria-labelledby']);
+    const restoreSlideshow = rememberAttributes(slideshow, ['role', 'aria-roledescription', 'aria-label']);
+    const restoreCards = cards.map((card) => rememberAttributes(card, ['role', 'aria-roledescription', 'aria-label']));
+    const isList = /^(UL|OL)$/.test(track.tagName || '');
+    const hashCardIndex = () => {
+      const hash = window.location?.hash;
+      if (!hash || hash === '#') return -1;
+      let id;
+      try { id = decodeURIComponent(hash.slice(1)); }
+      catch { return -1; }
+      const target = document.getElementById(id);
+      return target ? cards.findIndex((card) => card === target || card.contains(target)) : -1;
+    };
+
     const leftAt = (physicalIndex) => track.children[physicalIndex].getBoundingClientRect().left - track.children[0].getBoundingClientRect().left;
     const measure = () => {
       stride = leftAt(buffer + 1) - leftAt(buffer);
@@ -173,16 +194,20 @@
         track.prepend(...before);
         track.append(...after);
         track.setAttribute('tabindex', '0');
+        track.setAttribute('role', isList ? 'list' : 'group');
         track.setAttribute('aria-label', trackLabel);
+        track.removeAttribute('aria-labelledby');
         slideshow.setAttribute('role', 'group');
         slideshow.setAttribute('aria-roledescription', 'carousel');
         slideshow.setAttribute('aria-label', label);
         cards.forEach((card, cardIndex) => {
-          card.setAttribute('role', 'group');
+          card.setAttribute('role', isList ? 'listitem' : 'group');
           card.setAttribute('aria-roledescription', 'slide');
           card.setAttribute('aria-label', `${cardIndex + 1} of ${cards.length}`);
         });
         measure();
+        const linkedCard = hashCardIndex();
+        if (linkedCard !== -1) { index = linkedCard; wantsToPlay = false; }
         applyPosition(start + stride * index);
         syncPlayback();
       } else {
@@ -190,9 +215,9 @@
         clones.forEach((clone) => clone.remove());
         clones = [];
         track.scrollLeft = 0;
-        ['tabindex', 'aria-label'].forEach((name) => track.removeAttribute(name));
-        ['role', 'aria-roledescription', 'aria-label'].forEach((name) => slideshow.removeAttribute(name));
-        cards.forEach((card) => ['role', 'aria-roledescription', 'aria-label'].forEach((name) => card.removeAttribute(name)));
+        restoreTrack();
+        restoreSlideshow();
+        restoreCards.forEach((restore) => restore());
       }
     };
     const resize = () => {
@@ -205,6 +230,21 @@
       applyPosition(start + progress * stride);
       syncPlayback();
     };
+
+    const revealHashCard = () => {
+      if (!active) return;
+      const linkedCard = hashCardIndex();
+      if (linkedCard === -1) return;
+      stopAll();
+      settling = false;
+      gesture = null;
+      // A linked service stays in view until the visitor chooses Play.
+      wantsToPlay = false;
+      applyPosition(start + stride * linkedCard);
+      syncPlayback();
+    };
+    window.addEventListener('hashchange', revealHashCard);
+    window.addEventListener('load', revealHashCard);
 
     slideshow.querySelector('[data-slideshow-prev], [data-device-prev]').addEventListener('click', () => navigate(-1));
     slideshow.querySelector('[data-slideshow-next], [data-device-next]').addEventListener('click', () => navigate(1));
